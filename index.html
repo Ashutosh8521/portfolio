@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ashutosh Kumar — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Canvas for subtle particles -->
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  <!-- Decorative floating shapes -->
+  <div class="float-shapes" aria-hidden="true">
+    <span class="shape s1"></span>
+    <span class="shape s2"></span>
+    <span class="shape s3"></span>
+    <span class="shape s4"></span>
+    <span class="shape s5"></span>
+  </div>
+
+  <nav class="navbar">
+    <div class="brand">
+      <div class="logo">AK</div>
+      <div class="brand-text">
+        <div class="typewriter" aria-hidden="true"><span id="type-name"></span><span class="caret">|</span></div>
+        <div class="sub">Web Developer</div>
+      </div>
+    </div>
+
+    <div class="nav-actions">
+      <button id="theme-toggle" aria-label="Toggle theme">🌗</button>
+      <button class="nav-toggle" aria-label="Open menu">☰</button>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- HERO -->
+    <header id="home" class="hero section">
+      <div class="hero-inner reveal">
+        <h1 class="hero-title">Hi, I'm <span class="highlight"> <span id="typed-name">Ashutosh Kumar</span></span></h1>
+        <p class="hero-lead">I build smooth, modern, and accessible web experiences — HTML, CSS, C/C++, and Python (basic).</p>
+        <div class="hero-ctas">
+          <a class="btn" href="#projects">See Projects</a>
+          <a class="btn ghost" href="#contact">Contact Me</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about" class="about section reveal">
+      <div class="content">
+        <h2>About Me</h2>
+        <p>I'm <strong>Ashutosh Kumar</strong>, a web developer who enjoys building refined UI with smooth animations and attention to details. I work with HTML, CSS, C, C++, and Python (basic). I love turning ideas into delightful user experiences.</p>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects section reveal">
+      <div class="section-head">
+        <h2>Projects</h2>
+        <p>Selected work — clean, performant, and responsive.</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card" tabindex="0" data-tilt>
+          <div class="card-inner">
+            <h3>Portfolio Website</h3>
+            <p>Modern responsive portfolio built with HTML/CSS/JS. Glassmorphism UI and animations.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+          </div>
+        </article>
+
+        <article class="project-card" tabindex="0" data-tilt>
+          <div class="card-inner">
+            <h3>Student Management (C++)</h3>
+            <p>CLI based student management system demonstrating data structures and OOP in C++.</p>
+            <div class="tags"><span>C++</span><span>OOP</span></div>
+          </div>
+        </article>
+
+        <article class="project-card" tabindex="0" data-tilt>
+          <div class="card-inner">
+            <h3>Calculator (JS)</h3>
+            <p>Small calculator app demonstrating DOM manipulation and clean UI.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills section reveal">
+      <h2>Skills</h2>
+      <div class="skill-list">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">C</div>
+        <div class="skill">C++</div>
+        <div class="skill">Python (basic)</div>
+        <div class="skill">Responsive Design</div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact section reveal">
+      <h2>Contact Me</h2>
+      <form id="contact-form" class="contact-form" novalidate>
+        <div class="row">
+          <input type="text" name="name" placeholder="Your name" required />
+          <input type="email" name="email" placeholder="Your email" required />
+        </div>
+        <textarea name="message" rows="5" placeholder="Message" required></textarea>
+        <div class="form-actions">
+          <button type="submit" class="btn">Send Message</button>
+          <button type="reset" class="btn ghost">Reset</button>
+        </div>
+        <p id="form-feedback" class="form-feedback" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Ashutosh Kumar</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
